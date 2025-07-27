@@ -1,12 +1,11 @@
-train: ../train/images
-val: ../valid/images
-test: ../test/images
+train: C:\Users\wwwe7\Desktop\K-TECH_project\old_kamera\train\images
+val: C:\Users\wwwe7\Desktop\K-TECH_project\old_kamera\test\images
 
 nc: 2
 names: ['Fallen', 'Standing']
 
 roboflow:
-  workspace: project-gwtfn
+  workspace: project-gwtfnD
   project: fallen-people-9wcfl-mtyhv
   version: 1
   license: CC BY 4.0

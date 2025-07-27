@@ -11,30 +11,14 @@ def setup_training_environment():
     torch.backends.cudnn.benchmark = True
     print("✅ 훈련 환경 설정 완료")
 
-def validate_and_fix_yaml(yaml_path):
-    with open(yaml_path, 'r', encoding='utf-8') as f:
-        data = yaml.safe_load(f)
-    paths_to_check = ['train', 'val', 'test']
-    for path_key in paths_to_check:
-        if path_key in data:
-            path = Path(data[path_key])
-            if not path.exists():
-                relative_path = Path(yaml_path).parent / path.name
-                if relative_path.exists():
-                    data[path_key] = str(relative_path)
-    with open(yaml_path, 'w', encoding='utf-8') as f:
-        yaml.dump(data, f, default_flow_style=False, allow_unicode=True)
-    return data
-
 def train_model():
     setup_training_environment()
 
-    yaml_file = 'data.yaml'
+    yaml_file = 'old_kamera/data.yaml'
+
     if not os.path.exists(yaml_file):
         print(f"❌ YAML 파일 없음: {yaml_file}")
         return False
-
-    validate_and_fix_yaml(yaml_file)
 
     device = 0 if torch.cuda.is_available() else 'cpu'
 
