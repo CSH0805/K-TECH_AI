@@ -1,6 +1,4 @@
 old_kamera/train/
 old_kamera/test/
 single_training
-trained_yolov8s_model.pt
-yolo11n.pt
-yolov8s.pt
+*.pt
