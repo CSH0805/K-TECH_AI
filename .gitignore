@@ -2,3 +2,5 @@ old_kamera/train/
 old_kamera/test/
 single_training
 *.pt
+thermal_imaging/train/
+thermal_imaging/valid/

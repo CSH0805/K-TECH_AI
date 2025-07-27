@@ -1,0 +1,12 @@
+train: C:\Users\wwwe7\Desktop\K-TECH_project\thermal_imaging\train\images
+val: C:\Users\wwwe7\Desktop\K-TECH_project\thermal_imaging\valid\images
+
+nc: 1
+names: ['Human']
+
+roboflow:
+  workspace: project-gwtfn
+  project: thermal-imaging-rnri1-twiht
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/project-gwtfn/thermal-imaging-rnri1-twiht/dataset/1
